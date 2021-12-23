@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div class="page">
+            <!-- spiner here -->
+            <div class="spiner alignment">
+                <img src="images/ohmyspins-logo.png" alt="Girl in a jacket">
+            </div>
+            <div class="text_here alignment" id="text_here">
+                <h1 id="title">Text Title</h1>
+                <p id="p_text">here is the texthere is the texthere is the text</p>
+            </div>
+            <div class="indicator alignment">
+                <div class="attempts">
+                    <h2 id="attempts_left">Attempts Left:</h2>
+                    <div class="att_box">
+                        <p id="attempt_num">7</p>
+                    </div>
+                </div>
+                <div class="scr_button" id='scratch'> SCRATCH HERE
+                </div>
+            </div>
+            <div class="scratch_box alignment">
+                <div class="dot_box">
+                    <div class="round_circle"></div>
+                    <div class="yellow_box">
+                        <div class="winners_box" id="winner_title">
+                            <div class="logo"></div>
+                            <div class="win_text">WINNING NUMBERS</div>
+                            <div class="logo"></div>
+                        </div>
+                        <div class="winnums_redbox" id="winner_text">
+                            <div class="win_numbers" id="win_0">1</div>
+                            <div class="win_numbers" id="win_1">2</div>
+                            <div class="win_numbers" id="win_2">3</div>
+                            <div class="win_numbers" id="win_3">4</div>
+                            <div class="win_numbers" id="win_4">5</div>
+                        </div>
+                        <div class="yours_box">
+                            <div class="logo"></div>
+                            <div class="win_text">YOUR NUMBERS</div>
+                            <div class="logo"></div>
+                        </div>
+                        <div class="your_nums_gridbox" id="refresh">
+                            <div class="grid_numbers container" id="js-container1">
+                                <p id="num_0"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container2">
+                                <p id="num_1"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container3">
+                                <p id="num_2"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container4">
+                                <p id="num_3"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container5">
+                                <p id="num_4"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container6">
+                                <p id="num_5"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container7">
+                                <p id="num_6"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container8">
+                                <p id="num_7"></p>
+                            </div>
+                            <div class="grid_numbers container" id="js-container9">
+                                <p id="num_8"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer alignment">5</div>
+        </div>
+        <div class='popup_last' id='last_pop'></div>
+        <script src="index.js">
+        </script>
+
+    </body>
+
+</html>
