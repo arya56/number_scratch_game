@@ -17,7 +17,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
-.page {
+.page_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -27,33 +27,38 @@ body {
   width: 100%;
   font-size: 20px;
 }
-.page div {
+.page_wrapper div {
   /* border: 2px solid red; */
 }
 .popup_last {
   display: none;
 }
-.spiner {
+.top_logo {
   display: flex;
   justify-content: center;
 }
-.spiner img {
+.top_logo img {
   width: 20%;
 }
 .text_here {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .text_here h1 {
-  font-size: larger;
-  color: white;
+  /* font-size: larger;*/
+  color: white; 
+  font: bold 5.5vmin 'Fira Sans', sans-serif;
+  margin: 0;
+  
 }
 .text_here p {
-  font-size: medium;
-  color: yellow;
+  font: bold 3.5vmin 'Fira Sans', sans-serif;
+  color: gold;
+  margin: 0;
+
 }
 .indicator {
   display: flex;
@@ -65,6 +70,7 @@ body {
 .scr_button {
   display: block;
   width: 15vh;
+  /* width: inherit; */
   /* border: ; */
   border-radius: 20%;
   background-color: #aa049c;
@@ -80,14 +86,14 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 20%;
-  background-color: #f0df46;
+  background-color: gold;
 }
 .attempts h2 {
   font-size: 1vw;
   margin: 0;
 }
 .att_box {
-  background-color: rgb(117, 129, 238);
+  background-color: rgb(10 182 250);
   width: 3vw;
   height: 4vh;
   align-items: center;
@@ -99,13 +105,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.scratch_box {
-  display: flex;
-  justify-content: center;
-  background-color: tomato;
-  border: 5px solid yellow;
-  padding: 10px;
-}
+
 .alignment:nth-of-type(1) {
   flex-grow: 1;
 }
@@ -121,55 +121,135 @@ body {
 .alignment:nth-of-type(5) {
   flex-grow: 1;
 }
-.yellow_box {
-  background-color: yellow;
+.golden_box {
+  background-color: gold;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 38vh;
-  gap: 1vh;
-  border-radius: 10px;
+  height: 41vmax;
+  gap: 1vmax;
+  border-top-left-radius:4vmin;
+  border-top-right-radius:4vmin;
+  position: absolute;
+  top: 20vh;
+  width: inherit;
 }
 .your_nums_gridbox {
-  border: 10px solid green;
+  border: 1.4vmin solid mediumseagreen;
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 10vw;
+  /* gap:1vmin; */
+  width: 56vmin;
+  height: 27vmax;
+  padding: 1vmin;
 }
+
 .grid_numbers {
   gap: 1em;
   text-align: center;
 }
+.grid_numbers > p {
+  z-index: 0;
+  position: absolute;
+  /* top: -20px;
+  left: 2px; */
+  border-radius: 50%;
+  top:-2vmax;
+  font-size: 3vmax;
+}
 .winnums_redbox {
   display: flex;
   justify-content: space-evenly;
-  background-color: hotpink;
-  width: 10vw;
-  border-radius: 20%;
+  background-color: orangered;
+  width: 48vmin;
+  height: 5vmax;
+  align-items: center;
+  border-radius: 1.4vmin;
 }
 .dot_box {
-  border: 3px dotted yellowgreen;
+  /* border: 3px dotted yellowgreen; */
+  width: 65vmin;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+.inner_dot_border{
+  border: 1.4vmin dotted gold;
+  width: 69vmin;
+}
+.scratch_box {
+  display: flex;
+  justify-content: center;
+  background-color: orangered;
+  border: 1.4vmin solid gold;
+  padding: 1.4vmin;
+  width: 75vmin;
+  height: 76vmax;
+}
+/* .dot_b_1{
+  background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+.dot_b_2{
+  background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-size: 10px 1px;
+  background-repeat: repeat-y;
+} */
+
+.round_circle {
+  /* height: 350px; */
+  width: inherit;
+  background-color: rgb(10, 182, 250);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  border: 1vh solid gold;
+}
+.round_circle p {
+  color: gold;
+  font: bolder 10vmin 'Fira Sans', sans-serif;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px black;
+  position: relative;
+  text-align: center;
+}
+.to_win{
+  position: absolute;
+  top: -7vh;
+  text-align: center;
+}
+.to_win span{
+  position: absolute;
+  top: 2vmax;
+  left:14vmin;
+}
+.round_circle span {
+  font: bolder 5vmin 'Fira Sans', sans-serif;
 }
 .canvas {
   /* position: inherit; */
   z-index: 1;
   position: absolute;
-  top: -3px;
-  left: -3px;
+  /* top: -3px; */
+  left: -3vmin;
   border-radius: 50%;
   /* background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed; */
 }
-.grid_numbers > p {
-  z-index: 0;
-  position: absolute;
-  top: -20px;
-  left: 2px;
-  border-radius: 50%;
-}
+
 .winnums_redbox,
 .winners_box {
-  visibility: hidden;
+  /* visibility: hidden; */
+}
+.win_numbers {
+  color: #ebe6e6;
+  font: bolder 5vmin 'Fira Sans', sans-serif;
 }
 /* #winner_title,
 #winner_text {
@@ -177,7 +257,7 @@ body {
 } */
 
 .container {
-  border: 3px solid rgb(255, 0, 149);
+  /* border: 3px solid rgb(0, 255, 76); */
   position: relative;
   width: 30px;
   height: 30px;
@@ -200,49 +280,72 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  filter: alpha(opacity=70);
+  /* filter: alpha(opacity=70); */
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
-  opacity: 0.7;
+  opacity: 0.9;
   z-index: 100;
   display: none;
 }
-.cnt223 a {
+.first_pop a {
   text-decoration: none;
 }
 .popup-onload {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
-  display: none;
+  /* display: none; */
+  /* display: flex;
+  justify-content: flex-end;  */
   position: fixed;
   z-index: 101;
 }
-.cnt223,
-.main_pop {
-  min-width: 600px;
-  width: 600px;
-  min-height: 250px;
-  margin: 100px auto;
-  background: blue;
+.first_pop,
+.last_pop {
+  min-width: 20vw;
+  width: 40vw;
+  /* min-height: 250px; */
+  margin: 13vw auto;
+  background: rgb(10, 182, 250);
   position: relative;
   z-index: 103;
-  padding: 15px 35px;
+  padding: 6vh 8vw;
   border-radius: 5px;
   box-shadow: 0 2px 5px #000;
 }
-.cnt223 p {
+.first_pop {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* column-gap: 4em; */
+}
+
+.spin_coin {
+  margin: 0 auto;
+  width: 6vw;
+}
+.first_pop p {
   clear: both;
   color: #ebe6e6;
-  /* text-align: justify; */
-  font-size: 5vh;
-  font-family: sans-serif;
+  font: bolder 3.5vmin 'Fira Sans', sans-serif;
   text-align: center;
 }
-/* .cnt223 p a {
+
+button {
+  color: red;
+  /* font-weight: bold; */
+  font: bold 2vmin 'Fira Sans', sans-serif;
+  background-color: yellow;
+  width: 21vw;
+  min-height: 5vh;
+  border-radius: 0.4vw;
+  border: none;
+  margin: 0 auto;
+}
+/* .first_pop p a {
   color: #d91900;
   font-weight: bold;
 }
-.cnt223 .x {
+.first_pop .x {
   float: right;
   height: 35px;
   left: 22px;
@@ -250,16 +353,13 @@ body {
   top: -25px;
   width: 34px;
 }
-.cnt223 .x:hover {
+.first_pop .x:hover {
   cursor: pointer;
 } */
-.pop_spiner {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* width: 50%; */
-}
 
+/* .pop_spiner :nth-child(){
+  font-size: 20px;
+} */
 label {
   display: block;
   font: 1rem 'Fira Sans', sans-serif;
@@ -274,4 +374,5 @@ input {
   border: none; /* <-- This thing here */
   border: solid 1px #ccc;
   border-radius: 0.3vw;
+  font: 1.5rem 'Fira Sans', sans-serif;
 }

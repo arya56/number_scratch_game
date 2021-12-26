@@ -6,8 +6,8 @@ function addCanvas(i, reset) {
   canvas = Object.assign(document.createElement('canvas'), {
     className: 'canvas',
     id: `js-canvas${i}`,
-    width: '30',
-    height: '30',
+    width: '70',
+    height: '70',
   });
   document.getElementById(`js-container${i}`).appendChild(canvas);
   var container = document.getElementById(`js-container${i}`),
@@ -18,11 +18,12 @@ function addCanvas(i, reset) {
     image = new Image(),
     brush = new Image();
 
-  image.src = 'images/coin2.jpeg';
+  image.src = 'images/silver.jpg';
   image.onload = function () {
     ctx.drawImage(image, 0, 0);
     // Show the form when Image is loaded.
   };
+
   brush.src = 'images/coin2.jpeg';
 
   canvas.addEventListener('mousedown', handleMouseDown, false);
@@ -141,7 +142,7 @@ const handleFinalTry = () => {
   alertPrompt('congrats', 'Bingoo');
   displayWinnerNumbers();
   setTimeout(function () {
-    popupCreator(`<div class="main_pop">
+    popupCreator(`<div class="last_pop">
     <h1 class="y_won">CONGRATULATIONS, YOU WON!!</h1>
     <div class="div_750">
         <h2>$750 + 200 FREE SPINS</h2>
@@ -157,7 +158,7 @@ const handleFinalTry = () => {
   }, 2000);
 };
 function multiCanvas() {
-  alertPrompt('', '');
+  // alertPrompt('', '');
   // remove here was just 2 test
   let reset = [];
   for (let i = 1; i <= 9; i++) {
@@ -166,7 +167,7 @@ function multiCanvas() {
 }
 
 function scratchHanddler(numberGenerator, winnerGenerator) {
-  alertPrompt('', '');
+  //alertPrompt('', '');
   console.log('Scratch handdler', winnerGenerator);
   state.decrement();
   const attempts = document.getElementById('attempts_left');
@@ -202,7 +203,7 @@ const numbersCreator = () => {
 const randomGenerator = total => {
   const randomNumbers = [];
   while (randomNumbers.length < total) {
-    const random = Math.floor(Math.random() * 89) + 10;
+    const random = Math.floor(Math.random() * 98) + 1;
     if (randomNumbers.indexOf(random) === -1) randomNumbers.push(random);
   }
   return randomNumbers;
@@ -267,6 +268,7 @@ const popupCreator = content => {
     overlay.style.display = 'none';
     popBox.style.display = 'none';
   });
+  console.log(overlay);
 };
 
 (function main() {
@@ -289,14 +291,14 @@ const popupCreator = content => {
   window.addEventListener(
     'load',
     function () {
-      popupCreator(`<div class="cnt223"><img src="images/coin-animation.gif" width="150" height="150" alt="The Coin"
-      class="pop_spiner">
-    <p>YOU HAVE 3 FREE SPINS.<br><br><button class="close" id="closer">START NOW!</button></p>
+      popupCreator(`<div class="first_pop">
+      <img src="images/coin-animation.gif"  alt="The Coin" class="spin_coin">
+      <p>YOU HAVE 3 FREE SPINS</p>
+      <button class="close" id="closer">START NOW!</button>
     </div>`);
     },
     false
   );
-
   ///  show number of try first time
   showAttempt();
   multiCanvas();
