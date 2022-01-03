@@ -1,378 +1,2228 @@
-* {
-  box-sizing: border-box;
-}
-html {
-  background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-}
-body {
-  height: 100vh;
-  width: 100vw;
-}
-.page_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 3vh;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
-}
-.page_wrapper div {
-  /* border: 2px solid red; */
-}
-.popup_last {
-  display: none;
-}
-.top_logo {
-  display: flex;
-  justify-content: center;
-}
-.top_logo img {
-  width: 20%;
-}
-.text_here {
-  /* visibility: hidden; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.text_here h1 {
-  /* font-size: larger;*/
-  color: white; 
-  font: bold 5.5vmin 'Fira Sans', sans-serif;
-  margin: 0;
-  
-}
-.text_here p {
-  font: bold 3.5vmin 'Fira Sans', sans-serif;
-  color: gold;
-  margin: 0;
+@media screen and (min-width: 846px) {
+  * {
+    box-sizing: border-box;
+  }
 
-}
-.indicator {
-  display: flex;
-  justify-content: center;
-  gap: 1vw;
-  width: 18vw;
-  height: 5vh;
-}
-.scr_button {
-  display: block;
-  width: 15vh;
-  /* width: inherit; */
-  /* border: ; */
-  border-radius: 20%;
-  background-color: #aa049c;
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-}
-.attempts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20%;
-  background-color: gold;
-}
-.attempts h2 {
-  font-size: 1vw;
-  margin: 0;
-}
-.att_box {
-  background-color: rgb(10 182 250);
-  width: 3vw;
-  height: 4vh;
-  align-items: center;
-  text-align: center;
-  border-radius: 20%;
-}
-.att_box p {
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  html {
+    background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .top_logo {
+    grid-area: header;
+  }
+  .scratch_box {
+    grid-area: main;
+  }
+  .text_here {
+    grid-area: sidebar1;
+  }
+  .indicator {
+    grid-area: sidebar2;
+  }
+  .footer {
+    grid-area: girlimage;
+    margin-top: 19.6vmin;
+    z-index: 99;
+  }
+
+  .page_wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2vmax 36vmax 20vmax 17vmax 10vmax;
+    grid-template-columns: 2vmax 36vmax 20vmax 17vmax 10vmax;
+    -ms-grid-rows: 25vmin 30vmin 25vmin;
+    grid-template-rows: 25vmin 30vmin 25vmin;
+    grid-template-areas:
+      '.header header header header'
+      '.sidebar1 main main girlimage '
+      '.sidebar2 main main girlimage';
+  }
+  .popup_last {
+    display: none;
+  }
+  .top_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+  .top_logo img {
+    width: 20vmin;
+    margin-top: 5vmin;
+  }
+  .text_here {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 34vmin;
+  }
+  .text_here h1 {
+    color: white;
+    font: bold 5.5vmin 'Fira Sans', sans-serif;
+    margin: 0;
+  }
+  .text_here p {
+    font: bold 3.5vmin 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0;
+    text-align: center;
+  }
+  .indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4vmin;
+    height: 15vmin;
+  }
+  .scr_button {
+    display: block;
+    width: 15vmax;
+    border-radius: 2.2vmin;
+    color: white;
+    padding: 4.2vmin 2vmax;
+    font-size: 2.2vmin;
+    cursor: pointer;
+    text-align: center;
+    background-color: orangered;
+    border: 0.4vmin solid grey;
+    text-transform: uppercase;
+    margin-right: 2vmin;
+  }
+  .attempts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2.2vmin;
+    background-color: gold;
+    width: 29vmin;
+    border: 0.4vmin solid lightseagreen;
+  }
+  .attempts h2 {
+    font: bold 2.9vmin 'Fira Sans', sans-serif;
+    color: orangered;
+    margin: 0.3vmin;
+    padding: 0.9vmin;
+    text-align: center;
+  }
+  .att_box {
+    background-color: rgb(10 182 250);
+    width: 9vmin;
+    font-size: 2.8vmax;
+    height: 2 vh;
+    text-align: center;
+    border-radius: 2vmin;
+  }
+  .att_box p {
+    margin: 0;
+  }
+  .golden_box {
+    background-color: gold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 47vmin;
+    gap: 1vmax;
+    border-top-left-radius: 4vmin;
+    border-top-right-radius: 4vmin;
+    position: absolute;
+    top: 22vmin;
+    width: inherit;
+  }
+  .your_nums_gridbox {
+    border: 1.4vmin solid mediumseagreen;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    width: inherit;
+    height: inherit;
+    padding: 1vmin;
+  }
+
+  .grid_numbers {
+    gap: 1em;
+    text-align: center;
+  }
+  .grid_numbers > p {
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    top: -2vmax;
+    font-size: 2.5vmax;
+  }
+  .winnums_redbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-color: orangered;
+    width: 33vmin;
+    height: 5vmax;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 1.4vmin;
+  }
+  .dot_box {
+    position: relative;
+    width: 35vmax;
+    height: inherit;
+    margin: auto;
+  }
+  .inner_dot_border {
+    border: 1.4vmin dotted gold;
+    width: inherit;
+  }
+  .scratch_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: orangered;
+    border: 1.4vmin solid gold;
+    padding: 1.4vmin;
+    width: 44vmax;
+    height: 76vmin;
+  }
+
+  .round_circle {
+    width: inherit;
+    background-color: rgb(10, 182, 250);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border: 1vh solid gold;
+  }
+  .scratch_text {
+    color: gold;
+    font: bolder 7vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    text-align: center;
+  }
+  .to_win {
+    color: gold;
+    font: bolder 7vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -9vh;
+    text-align: center;
+  }
+  .to_win span {
+    color: gold;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -1vmin;
+    text-align: center;
+  }
+  .round_circle span {
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+  }
+  .canvas {
+    position: relative;
+    top: 0.5vmin;
+    right: 2vmin;
+    border-radius: 50%;
+  }
+  .winnums_redbox,
+  .winners_box {
+    visibility: hidden;
+  }
+  .win_numbers {
+    color: #ebe6e6;
+    font: bolder 4vmin 'Fira Sans', sans-serif;
+  }
+
+  .container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  /* For the pop up */
+
+  .first_pop a {
+    text-decoration: none;
+  }
+
+  .overlay {
+    position: fixed;
+    margin: auto 0.5%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.9;
+    z-index: 100;
+    display: none;
+  }
+  .first_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .first_pop {
+    width: 50vmax;
+    margin: 15vmin 25vmax;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .spin_coin {
+    margin: 5vmin auto 0.3vmin;
+    width: 28vmin;
+  }
+  .first_pop p {
+    color: white;
+    font: bolder 8.5vmin 'Fira Sans', sans-serif;
+    margin: 3vmin;
+    text-align: center;
+  }
+  .close {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 45vmax;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 0 auto 2vmin;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  .last_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 67vmax;
+    height: 64vmin;
+    margin: 16vmin 16.5vmax;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .y_won {
+    color: whitesmoke;
+    font: bolder 4vmin 'Fira Sans', sans-serif;
+    text-align: center;
+  }
+  .div_750 {
+    color: gold;
+    font: 3.1vmin 'Fira Sans', sans-serif;
+    border: 0.6vmin dotted whitesmoke;
+    border-radius: 2.2vmin;
+    width: 52vmax;
+    text-align: center;
+  }
+  .last_pop p {
+    color: whitesmoke;
+    font: 1.6vmin 'Fira Sans', sans-serif;
+  }
+
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  label {
+    display: block;
+    color: whitesmoke;
+    font: 2.5vmax 'Fira Sans', sans-serif;
+  }
+  input {
+    display: block;
+    margin: 0.9vmin 0;
+    width: 29vmax;
+    height: 5vmin;
+    padding: 2vmin;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 1.3vmin;
+    font: bold 3vmin 'Fira Sans', sans-serif;
+  }
+  .last_btn {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 35vmax;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 2vmin auto 3vmin;
+  }
 }
 
-.alignment:nth-of-type(1) {
-  flex-grow: 1;
-}
-.alignment:nth-of-type(2) {
-  flex-grow: 1;
-}
-.alignment:nth-of-type(3) {
-  flex-grow: 1;
-}
-.alignment:nth-of-type(4) {
-  flex-grow: 3;
-}
-.alignment:nth-of-type(5) {
-  flex-grow: 1;
-}
-.golden_box {
-  background-color: gold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 41vmax;
-  gap: 1vmax;
-  border-top-left-radius:4vmin;
-  border-top-right-radius:4vmin;
-  position: absolute;
-  top: 20vh;
-  width: inherit;
-}
-.your_nums_gridbox {
-  border: 1.4vmin solid mediumseagreen;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  /* gap:1vmin; */
-  width: 56vmin;
-  height: 27vmax;
-  padding: 1vmin;
-}
+@media screen and (max-width: 845px) {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  .page_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    gap: 2vmax;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2.5vmin;
+  }
+  .popup_last {
+    display: none;
+  }
+  .top_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .top_logo img {
+    width: 28vmin;
+    margin-top: 24vmin;
+  }
+  .text_here {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .text_here h1 {
+    color: white;
+    font: bold 5.5vmin 'Fira Sans', sans-serif;
+    margin: 0;
+  }
+  .text_here p {
+    font: bold 3.5vmin 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0;
+  }
+  .indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 7vw;
+    width: 61vw;
+  }
+  .scr_button {
+    display: block;
+    width: 17vmin;
+    border-radius: 2.2vmin;
+    color: white;
+    padding: 3.2vmin 1vmax;
+    font-size: 2.9vmin;
+    cursor: pointer;
+    text-align: center;
+    background-color: orangered;
+    border: 0.4vmin solid grey;
+    text-transform: uppercase;
+  }
+  .attempts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2.2vmin;
+    background-color: gold;
+    width: 29vmin;
+    height: 15vmin;
+    border: 0.4vmin solid lightseagreen;
+  }
+  .attempts h2 {
+    font: bold 2.9vmin 'Fira Sans', sans-serif;
+    color: orangered;
+    margin: 0.3vmin;
+    padding: 0.9vmin;
+    text-align: center;
+  }
+  .att_box {
+    background-color: rgb(10 182 250);
+    width: 17vmin;
+    font-size: 2.8vmax;
+    height: 2 vh;
+    text-align: center;
+    border-radius: 1.4vmin;
+  }
+  .att_box p {
+    margin: 0;
+  }
 
-.grid_numbers {
-  gap: 1em;
-  text-align: center;
-}
-.grid_numbers > p {
-  z-index: 0;
-  position: absolute;
-  /* top: -20px;
-  left: 2px; */
-  border-radius: 50%;
-  top:-2vmax;
-  font-size: 3vmax;
-}
-.winnums_redbox {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: orangered;
-  width: 48vmin;
-  height: 5vmax;
-  align-items: center;
-  border-radius: 1.4vmin;
-}
-.dot_box {
-  /* border: 3px dotted yellowgreen; */
-  width: 65vmin;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  position: relative;
-}
-.inner_dot_border{
-  border: 1.4vmin dotted gold;
-  width: 69vmin;
-}
-.scratch_box {
-  display: flex;
-  justify-content: center;
-  background-color: orangered;
-  border: 1.4vmin solid gold;
-  padding: 1.4vmin;
-  width: 75vmin;
-  height: 76vmax;
-}
-/* .dot_b_1{
-  background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
-  background-position: top;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
-}
-.dot_b_2{
-  background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
-  background-position: right;
-  background-size: 10px 1px;
-  background-repeat: repeat-y;
-} */
+  .alignment:nth-of-type(1) {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .alignment:nth-of-type(2) {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .alignment:nth-of-type(3) {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .alignment:nth-of-type(4) {
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+  }
+  .alignment:nth-of-type(5) {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .golden_box {
+    background-color: gold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 44vmax;
+    gap: 1vmax;
+    border-top-left-radius: 4vmin;
+    border-top-right-radius: 4vmin;
+    position: relative;
+    top: -17vmax;
+    width: inherit;
+    margin-bottom: -17vmax;
+  }
+  .your_nums_gridbox {
+    border: 1.4vmin solid mediumseagreen;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    padding: 1vmin;
+    width: inherit;
+    height: inherit;
+  }
 
-.round_circle {
-  /* height: 350px; */
-  width: inherit;
-  background-color: rgb(10, 182, 250);
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  border: 1vh solid gold;
-}
-.round_circle p {
-  color: gold;
-  font: bolder 10vmin 'Fira Sans', sans-serif;
-  text-transform: uppercase;
-  -webkit-text-stroke: 2px black;
-  position: relative;
-  text-align: center;
-}
-.to_win{
-  position: absolute;
-  top: -7vh;
-  text-align: center;
-}
-.to_win span{
-  position: absolute;
-  top: 2vmax;
-  left:14vmin;
-}
-.round_circle span {
-  font: bolder 5vmin 'Fira Sans', sans-serif;
-}
-.canvas {
-  /* position: inherit; */
-  z-index: 1;
-  position: absolute;
-  /* top: -3px; */
-  left: -3vmin;
-  border-radius: 50%;
-  /* background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed; */
-}
+  .grid_numbers {
+    gap: 1em;
+    text-align: center;
+  }
+  .grid_numbers > p {
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    top: -2vmax;
+    font-size: 3vmax;
+  }
+  .winnums_redbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-color: orangered;
+    width: 48vmin;
+    height: 5vmax;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 1.4vmin;
+  }
+  .dot_box {
+    width: 65vmin;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+    position: relative;
+  }
+  .inner_dot_border {
+    border: 1.4vmin dotted gold;
+    width: 69vmin;
+  }
+  .scratch_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: orangered;
+    border: 1.4vmin solid gold;
+    padding: 1.4vmin;
+  }
+  .girl_image {
+    display: none;
+  }
+  .round_circle {
+    width: inherit;
+    background-color: rgb(10, 182, 250);
+    border-radius: 50%;
+    display: inline-block;
+    border: 1vh solid gold;
+    padding: 3vmax 0;
+  }
+  .scratch_text {
+    color: gold;
+    font: bolder 8vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    text-align: center;
+  }
+  .to_win {
+    color: gold;
+    font: bolder 9vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -7.2vmax;
+    text-align: center;
+  }
+  .to_win span {
+    position: absolute;
+    top: 3vmin;
+    left: 16vmin;
+  }
+  .round_circle span {
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+  }
+  .canvas {
+    position: relative;
+    right: 3vmin;
+    border-radius: 50%;
+  }
 
-.winnums_redbox,
-.winners_box {
-  /* visibility: hidden; */
-}
-.win_numbers {
-  color: #ebe6e6;
-  font: bolder 5vmin 'Fira Sans', sans-serif;
-}
-/* #winner_title,
-#winner_text {
-  visibility: hidden;
-} */
+  .winnums_redbox,
+  .winners_box {
+    visibility: hidden;
+  }
+  .win_numbers {
+    color: #ebe6e6;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+  }
 
-.container {
-  /* border: 3px solid rgb(0, 255, 76); */
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 0 auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-/* .fuck{
-  display: none;
-} */
-/* For the pop up */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  /* filter: alpha(opacity=70); */
-  -moz-opacity: 0.7;
-  -khtml-opacity: 0.7;
-  opacity: 0.9;
-  z-index: 100;
-  display: none;
-}
-.first_pop a {
-  text-decoration: none;
-}
-.popup-onload {
-  width: 100vw;
-  margin: 0 auto;
-  /* display: none; */
-  /* display: flex;
-  justify-content: flex-end;  */
-  position: fixed;
-  z-index: 101;
-}
-.first_pop,
-.last_pop {
-  min-width: 20vw;
-  width: 40vw;
-  /* min-height: 250px; */
-  margin: 13vw auto;
-  background: rgb(10, 182, 250);
-  position: relative;
-  z-index: 103;
-  padding: 6vh 8vw;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px #000;
-}
-.first_pop {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  /* column-gap: 4em; */
-}
+  .container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
 
-.spin_coin {
-  margin: 0 auto;
-  width: 6vw;
-}
-.first_pop p {
-  clear: both;
-  color: #ebe6e6;
-  font: bolder 3.5vmin 'Fira Sans', sans-serif;
-  text-align: center;
-}
+  /* For the pop up */
 
-button {
-  color: red;
-  /* font-weight: bold; */
-  font: bold 2vmin 'Fira Sans', sans-serif;
-  background-color: yellow;
-  width: 21vw;
-  min-height: 5vh;
-  border-radius: 0.4vw;
-  border: none;
-  margin: 0 auto;
-}
-/* .first_pop p a {
-  color: #d91900;
-  font-weight: bold;
-}
-.first_pop .x {
-  float: right;
-  height: 35px;
-  left: 22px;
-  position: relative;
-  top: -25px;
-  width: 34px;
-}
-.first_pop .x:hover {
-  cursor: pointer;
-} */
+  .first_pop a {
+    text-decoration: none;
+  }
 
-/* .pop_spiner :nth-child(){
-  font-size: 20px;
-} */
-label {
-  display: block;
-  font: 1rem 'Fira Sans', sans-serif;
-}
+  .overlay {
+    position: fixed;
+    margin: auto 0.5%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.9;
+    z-index: 100;
+    display: none;
+  }
+  .first_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .first_pop {
+    width: 76vmin;
+    margin: 20vmax 11.5vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .spin_coin {
+    margin: 5vmin auto 0.3vmin;
+    width: 28vmin;
+  }
+  .first_pop p {
+    color: white;
+    font: bolder 8.5vmin 'Fira Sans', sans-serif;
+    margin: 3vmin;
+    text-align: center;
+  }
+  .close {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 45vmax;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 0 auto 2vmin;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
 
-input {
-  display: block;
-  margin: 0.4rem 0;
-  width: 12vw;
-  height: 25px;
-  /* margin: 0 auto; */
-  border: none; /* <-- This thing here */
-  border: solid 1px #ccc;
-  border-radius: 0.3vw;
-  font: 1.5rem 'Fira Sans', sans-serif;
+  .last_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 76vmin;
+    height: 64vmin;
+    margin: 20vmax 12vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .y_won {
+    color: whitesmoke;
+    font: bolder 4vmin 'Fira Sans', sans-serif;
+    text-align: center;
+  }
+  .div_750 {
+    color: gold;
+    font: 3.1vmin 'Fira Sans', sans-serif;
+    border: 0.6vmin dotted whitesmoke;
+    border-radius: 2.2vmin;
+    width: 73vmin;
+    text-align: center;
+  }
+  .last_pop p {
+    color: whitesmoke;
+    font: 1.6vmin 'Fira Sans', sans-serif;
+  }
+
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  label {
+    display: block;
+    color: whitesmoke;
+    font: 2.5vmax 'Fira Sans', sans-serif;
+  }
+  input {
+    display: block;
+    margin: 0.9vmin 0;
+    width: 29vmax;
+    height: 5vmin;
+    padding: 2vmin;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 1.3vmin;
+    font: bold 3vmin 'Fira Sans', sans-serif;
+  }
+  .last_btn {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 35vmax;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 2vmin auto 3vmin;
+  }
+}
+@media screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .top_logo {
+    grid-area: header;
+  }
+  .scratch_box {
+    grid-area: main;
+  }
+  .text_here {
+    grid-area: sidebar1;
+  }
+  .indicator {
+    grid-area: sidebar2;
+  }
+  .footer {
+    grid-area: girlimage;
+    margin-top: 19.6vmin;
+    z-index: 99;
+  }
+
+  .page_wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100vmin;
+    grid-template-columns: 100vmin;
+    -ms-grid-rows: 23vmax 7vmax 9vmax 69vmax 6vmax;
+    grid-template-rows: 23vmax 7vmax 9vmax 69vmax 6vmax;
+    grid-template-areas:
+      'header'
+      'sidebar1'
+      'sidebar2'
+      'main '
+      'girlimage';
+  }
+
+  .popup_last {
+    display: none;
+  }
+  .top_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+  .top_logo img {
+    width: 53vmin;
+    margin-top: -2vmin;
+  }
+  .text_here {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .text_here h1 {
+    color: white;
+    font: bold 5.5vmin 'Fira Sans', sans-serif;
+    margin: 0;
+  }
+  .text_here p {
+    font: bold 3.5vmin 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0;
+  }
+  .indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 7vmin;
+    margin: 0 auto;
+    height: 15vmin;
+  }
+  .scr_button {
+    display: block;
+    width: 20vmin;
+    border-radius: 2.2vmin;
+    color: white;
+    padding: 0.2vmin 1vmax;
+    font-size: 2.9vmin;
+    cursor: pointer;
+    white-space: pre-wrap;
+    text-align: center;
+    background-color: orangered;
+    border: 0.4vmin solid grey;
+    text-transform: uppercase;
+  }
+  .attempts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2.2vmin;
+    background-color: gold;
+    width: 58vmin;
+    border: 0.4vmin solid lightseagreen;
+  }
+  .attempts h2 {
+    font: bold 2.9vmin 'Fira Sans', sans-serif;
+    color: orangered;
+    margin: 0.3vmin;
+    padding: 0.9vmin;
+    text-align: center;
+  }
+  .att_box {
+    background-color: rgb(10 182 250);
+    width: 17vmin;
+    font-size: 2.8vmax;
+    height: 2 vh;
+    text-align: center;
+    border-radius: 2vmin;
+  }
+  .att_box p {
+    margin: 0;
+  }
+
+  .golden_box {
+    background-color: gold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 43vmax;
+    gap: 1vmax;
+    border-top-left-radius: 4vmin;
+    border-top-right-radius: 4vmin;
+    position: absolute;
+    top: 21vmax;
+  }
+  .your_nums_gridbox {
+    border: 1.4vmin solid mediumseagreen;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 1vmin;
+    width: inherit;
+    height: inherit;
+  }
+
+  .grid_numbers {
+    gap: 1em;
+    text-align: center;
+  }
+  .grid_numbers > p {
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    top: -2vmax;
+    font-size: 3vmax;
+  }
+  .winnums_redbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-color: orangered;
+    width: 48vmin;
+    height: 5vmax;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 1.4vmin;
+  }
+  .dot_box {
+    position: relative;
+    width: 80vmin;
+    height: inherit;
+    margin: auto;
+  }
+  .inner_dot_border {
+    border: 1.4vmin dotted gold;
+    width: inherit;
+  }
+  .scratch_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: orangered;
+    border: 1.4vmin solid gold;
+    padding: 1.4vmin;
+    width: 90vmin;
+    margin: 0vmax 5vmin;
+    height: inherit;
+  }
+  .round_circle {
+    width: inherit;
+    background-color: rgb(10, 182, 250);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border: 1vh solid gold;
+    padding: 2vmax 0;
+  }
+  .scratch_text {
+    color: gold;
+    font: bolder 11vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    text-align: center;
+    top: -3.5vmax;
+  }
+  .to_win {
+    color: gold;
+    font: bolder 9vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -11vmax;
+    text-align: center;
+  }
+  .to_win span {
+    color: gold;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -1vmin;
+    left: 0vmax;
+    text-align: center;
+  }
+
+  .canvas {
+    position: relative;
+    right: 3.3vmin;
+    border-radius: 50%;
+  }
+  .winnums_redbox,
+  .winners_box {
+    visibility: hidden;
+  }
+  .win_numbers {
+    color: #ebe6e6;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+  }
+
+  .container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  /* For the pop up */
+
+  .first_pop a {
+    text-decoration: none;
+  }
+
+  .overlay {
+    position: fixed;
+    margin: auto 0.5%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.9;
+    z-index: 100;
+    display: none;
+  }
+  .first_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .first_pop {
+    width: 82vmin;
+    margin: 24vmax 9vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .spin_coin {
+    margin: 5vmin auto 0.3vmin;
+    width: 28vmin;
+  }
+  .first_pop p {
+    color: white;
+    font: bolder 8.5vmin 'Fira Sans', sans-serif;
+    margin: 3vmin;
+    text-align: center;
+  }
+  .close {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 55vmin;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 0 auto 2vmin;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  .last_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 99vmin;
+    height: 39vmax;
+    margin: 25vmax 0.1vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .y_won {
+    color: whitesmoke;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-align: center;
+    margin-top: 3vmax;
+  }
+  .div_750 {
+    color: gold;
+    font: 3.1vmin 'Fira Sans', sans-serif;
+    border: 0.6vmin dotted whitesmoke;
+    border-radius: 2.2vmin;
+    width: 85vmin;
+    text-align: center;
+  }
+  .last_pop p {
+    color: whitesmoke;
+    font: 1.6vmin 'Fira Sans', sans-serif;
+  }
+
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  label {
+    display: block;
+    color: whitesmoke;
+    font: 2.5vmax 'Fira Sans', sans-serif;
+  }
+  input {
+    display: block;
+    margin: 0.9vmin 0;
+    width: 29vmax;
+    height: 5vmin;
+    padding: 2vmin;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 1.3vmin;
+    font: bold 3vmin 'Fira Sans', sans-serif;
+  }
+  .last_btn {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 35vmax;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 2vmin auto 3vmin;
+  }
+}
+@media screen and (max-width: 470px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .top_logo {
+    grid-area: header;
+  }
+  .scratch_box {
+    grid-area: main;
+  }
+  .text_here {
+    grid-area: sidebar1;
+  }
+  .indicator {
+    grid-area: sidebar2;
+  }
+  .footer {
+    grid-area: girlimage;
+    margin-top: 19.6vmin;
+    z-index: 99;
+  }
+
+  .page_wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100vmin;
+    grid-template-columns: 100vmin;
+    -ms-grid-rows: 18vmax 6vmax 10vmax 64vmax 7vmax;
+    grid-template-rows: 18vmax 6vmax 10vmax 64vmax 7vmax;
+    grid-template-areas:
+      'header'
+      'sidebar1'
+      'sidebar2'
+      'main '
+      'girlimage';
+  }
+  .popup_last {
+    display: none;
+  }
+  .top_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+  .top_logo img {
+    width: 53vmin;
+    margin-top: -2vmin;
+  }
+  .text_here {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .text_here h1 {
+    color: white;
+    font: bold 5.5vmin 'Fira Sans', sans-serif;
+    margin: 0;
+  }
+  .text_here p {
+    font: bold 3.5vmin 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0;
+  }
+  .indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 6vmin;
+    margin: 0 auto;
+    height: 15vmin;
+  }
+  .scr_button {
+    display: block;
+    width: 20vmin;
+    border-radius: 2.2vmin;
+    color: white;
+    padding: 0.2vmin 1vmax;
+    font-size: 3.2vmin;
+    cursor: pointer;
+    white-space: pre-wrap;
+    text-align: center;
+    background-color: orangered;
+    border: 0.4vmin solid grey;
+    text-transform: uppercase;
+  }
+  .attempts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2.2vmin;
+    background-color: gold;
+    width: 58vmin;
+    border: 0.4vmin solid lightseagreen;
+  }
+  .attempts h2 {
+    font: bold 2.9vmin 'Fira Sans', sans-serif;
+    color: orangered;
+    margin: 0.3vmin;
+    padding: 0.9vmin;
+    text-align: center;
+  }
+  .att_box {
+    background-color: rgb(10 182 250);
+    width: 17vmin;
+    font-size: 2.8vmax;
+    height: 2 vh;
+    text-align: center;
+    border-radius: 2vmin;
+  }
+  .att_box p {
+    margin: 0;
+  }
+
+  .golden_box {
+    background-color: gold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 43vmax;
+    gap: 1vmax;
+    border-top-left-radius: 4vmin;
+    border-top-right-radius: 4vmin;
+    position: absolute;
+    top: 17vmax;
+  }
+  .your_nums_gridbox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 1vmin;
+    width: inherit;
+    height: inherit;
+    padding: 3.5vmin;
+  }
+
+  .grid_numbers {
+    gap: 1em;
+    text-align: center;
+  }
+  .grid_numbers > p {
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    top: -2vmax;
+    font-size: 3vmax;
+  }
+  .winnums_redbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-color: orangered;
+    width: 48vmin;
+    height: 5vmax;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 1.4vmin;
+  }
+  .dot_box {
+    position: relative;
+    width: 80vmin;
+    height: inherit;
+    margin: auto;
+  }
+  .inner_dot_border {
+    border: 1.4vmin dotted gold;
+    width: inherit;
+  }
+  .scratch_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: orangered;
+    border: 1.4vmin solid gold;
+    padding: 1.4vmin;
+    width: 90vmin;
+    margin: 0vmax 5vmin;
+    height: inherit;
+  }
+
+  .round_circle {
+    width: inherit;
+    background-color: rgb(10, 182, 250);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border: 1vh solid gold;
+    padding: 2vmax 0;
+  }
+  .scratch_text {
+    color: gold;
+    font: bolder 11vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    text-align: center;
+    top: -1.7vmax;
+  }
+  .to_win {
+    color: gold;
+    font: bolder 9vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -7vmax;
+    text-align: center;
+  }
+  .to_win span {
+    color: gold;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -0.5vmax;
+    left: 0vmax;
+    text-align: center;
+  }
+  .round_circle span {
+  }
+  .canvas {
+    position: relative;
+    top: 1vmin;
+    right: 1vmin;
+    border-radius: 50%;
+  }
+  .winnums_redbox,
+  .winners_box {
+    visibility: hidden;
+  }
+  .win_numbers {
+    color: #ebe6e6;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+  }
+
+  .container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  /* For the pop up */
+
+  .first_pop a {
+    text-decoration: none;
+  }
+
+  .overlay {
+    position: fixed;
+    margin: auto 0.5%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.9;
+    z-index: 100;
+    display: none;
+  }
+  .first_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .first_pop {
+    width: 99vmin;
+    margin: 25vmax 0.5vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .spin_coin {
+    margin: 5vmin auto 0.3vmin;
+    width: 28vmin;
+  }
+  .first_pop p {
+    color: white;
+    font: bolder 8.5vmin 'Fira Sans', sans-serif;
+    margin: 3vmin;
+    text-align: center;
+  }
+  .close {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 55vmin;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 0 auto 2vmin;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  .last_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 99vmin;
+    height: 40vmax;
+    margin: 25vmax 0.1vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .y_won {
+    color: whitesmoke;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-align: center;
+    margin-top: 3vmax;
+  }
+  .div_750 {
+    color: gold;
+    font: 4.1vmin 'Fira Sans', sans-serif;
+    border: 0.6vmin dotted whitesmoke;
+    border-radius: 2.2vmin;
+    width: 83vmin;
+    text-align: center;
+  }
+  .last_pop p {
+    color: whitesmoke;
+    font: 3.9vmin 'Fira Sans', sans-serif;
+  }
+
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  label {
+    display: block;
+    color: whitesmoke;
+    font: 6.5vmin 'Fira Sans', sans-serif;
+  }
+  input {
+    display: block;
+    margin: 0.9vmin 0;
+    width: 83vmin;
+    height: 4vmax;
+    padding: 2vmin;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 1.3vmin;
+    font: bold 5vmin 'Fira Sans', sans-serif;
+  }
+  .last_btn {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 99vmin;
+    min-height: 5vmax;
+    border-radius: 2vmin;
+    border: none;
+    margin: 2vmin auto 0vmax;
+  }
+}
+@media screen and (max-width: 369px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: url(images/ohmyspins_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .top_logo {
+    grid-area: header;
+  }
+  .scratch_box {
+    grid-area: main;
+  }
+  .text_here {
+    grid-area: sidebar1;
+  }
+  .indicator {
+    grid-area: sidebar2;
+  }
+  .footer {
+    grid-area: girlimage;
+    margin-top: 19.6vmin;
+    z-index: 99;
+  }
+
+  .page_wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100vmin;
+    grid-template-columns: 100vmin;
+    -ms-grid-rows: 18vmax 6vmax 16vmax 48vmax 0vmax;
+    grid-template-rows: 18vmax 6vmax 16vmax 48vmax 0vmax;
+    grid-template-areas:
+      'header'
+      'sidebar1'
+      'sidebar2'
+      'main '
+      'girlimage';
+  }
+
+  .popup_last {
+    display: none;
+  }
+  .top_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+  .top_logo img {
+    width: 53vmin;
+    margin-top: -2vmin;
+  }
+  .text_here {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .text_here h1 {
+    color: white;
+    font: bold 5.5vmin 'Fira Sans', sans-serif;
+    margin: 0;
+  }
+  .text_here p {
+    font: bold 2.5vmax 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0;
+    text-align: center;
+  }
+  .indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 6vmin;
+    margin: 0 auto;
+    height: 15vmin;
+  }
+  .scr_button {
+    display: block;
+    width: 30vmin;
+    height: 11vmax;
+    border-radius: 2.2vmin;
+    color: white;
+    padding: 1.9vmax 2vmin;
+    font-size: 1.3vmax;
+    cursor: pointer;
+    white-space: pre-wrap;
+    text-align: center;
+    background-color: orangered;
+    border: 0.4vmin solid grey;
+    text-transform: uppercase;
+  }
+  .attempts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2.2vmin;
+    background-color: gold;
+    width: 58vmin;
+    height: 11vmax;
+    border: 0.4vmin solid lightseagreen;
+  }
+  .attempts h2 {
+    font: bold 2vmax 'Fira Sans', sans-serif;
+    color: orangered;
+    margin: 0.3vmin;
+    padding: 0.9vmin;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .att_box {
+    background-color: rgb(10 182 250);
+    width: 17vmin;
+    font-size: 2.8vmax;
+    height: 2 vh;
+    text-align: center;
+    border-radius: 2vmin;
+  }
+  .att_box p {
+    margin: 0;
+  }
+  .golden_box {
+    background-color: gold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 31vmax;
+    gap: 1vmax;
+    border-top-left-radius: 4vmin;
+    border-top-right-radius: 4vmin;
+    position: absolute;
+    top: 14.1vmax;
+  }
+  .your_nums_gridbox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 1vmin;
+    width: inherit;
+    height: inherit;
+    padding: 3.5vmin;
+  }
+
+  .grid_numbers {
+    gap: 1em;
+    text-align: center;
+  }
+  .grid_numbers > p {
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    top: -2vmax;
+    font-size: 3vmax;
+  }
+  .winnums_redbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-color: orangered;
+    width: 48vmin;
+    height: 5vmax;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 1.4vmin;
+  }
+  .dot_box {
+    position: relative;
+    width: 86vmin;
+    height: inherit;
+    margin: auto;
+  }
+  .inner_dot_border {
+    border: 1.4vmin dotted gold;
+    width: inherit;
+  }
+  .scratch_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: orangered;
+    border: 1.4vmin solid gold;
+    padding: 1.4vmin;
+    width: 95vmin;
+    margin: 0vmax 2.5vmin;
+    height: inherit;
+  }
+
+  .round_circle {
+    width: inherit;
+    background-color: rgb(10, 182, 250);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border: 1vh solid gold;
+    padding: 3vmax 0;
+  }
+  .scratch_text {
+    color: gold;
+    font: bolder 11vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    text-align: center;
+    top: -2.9vmax;
+  }
+  .to_win {
+    color: gold;
+    font: bolder 11vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -6.6vmax;
+    text-align: center;
+  }
+  .to_win span {
+    color: gold;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    top: -0.5vmax;
+    left: 0vmax;
+    text-align: center;
+  }
+  .canvas {
+    position: relative;
+    top: 1vmin;
+    right: 1vmin;
+    border-radius: 50%;
+  }
+
+  .winnums_redbox,
+  .winners_box {
+    visibility: hidden;
+  }
+  .win_numbers {
+    color: #ebe6e6;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+  }
+
+  .container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  /* For the pop up */
+
+  .first_pop a {
+    text-decoration: none;
+  }
+
+  .overlay {
+    position: fixed;
+    margin: auto 0.5%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.9;
+    z-index: 100;
+    display: none;
+  }
+
+  .first_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .first_pop {
+    width: 99vmin;
+    margin: 25vmax 0.5vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .spin_coin {
+    margin: 5vmin auto 0.3vmin;
+    width: 28vmin;
+  }
+  .first_pop p {
+    color: white;
+    font: bolder 8.5vmin 'Fira Sans', sans-serif;
+    margin: 3vmin;
+    text-align: center;
+  }
+  .close {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 55vmin;
+    min-height: 5vh;
+    border-radius: 2vmin;
+    border: none;
+    margin: 0 auto 2vmin;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  .last_pop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 99vmin;
+    height: 40vmax;
+    margin: 25vmax 0.1vmin;
+    background: rgb(10, 182, 250);
+    position: relative;
+    z-index: 103;
+    border-radius: 1.2vmin;
+    box-shadow: 0 2px 5px #000;
+  }
+  .y_won {
+    color: whitesmoke;
+    font: bolder 5vmin 'Fira Sans', sans-serif;
+    text-align: center;
+    margin-top: 3vmax;
+  }
+  .div_750 {
+    color: gold;
+    font: 4.1vmin 'Fira Sans', sans-serif;
+    border: 0.6vmin dotted whitesmoke;
+    border-radius: 2.2vmin;
+    width: 83vmin;
+    text-align: center;
+  }
+  .last_pop p {
+    color: whitesmoke;
+    font: 3.9vmin 'Fira Sans', sans-serif;
+  }
+
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  label {
+    display: block;
+    color: whitesmoke;
+    font: 6.5vmin 'Fira Sans', sans-serif;
+  }
+  input {
+    display: block;
+    margin: 0.9vmin 0;
+    width: 83vmin;
+    height: 4vmax;
+    padding: 2vmin;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 1.3vmin;
+    font: bold 5vmin 'Fira Sans', sans-serif;
+  }
+  .last_btn {
+    color: red;
+    font: bold 4vmin 'Fira Sans', sans-serif;
+    background-color: gold;
+    width: 99vmin;
+    min-height: 5vmax;
+    border-radius: 2vmin;
+    border: none;
+    margin: 2vmin auto 0vmax;
+  }
 }

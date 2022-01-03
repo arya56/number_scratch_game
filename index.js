@@ -1,13 +1,21 @@
 function addCanvas(i, reset) {
-  'use strict';
+  ('use strict');
   let index = i;
   var loopOnce = 0;
   var isDrawing, lastPoint;
+  let canvasWidthDefault = '70';
+  let canvasHeightDefault = '70';
+  let imageSource = 'images/silver.jpg';
+  if (screen.width < 471) {
+    canvasWidthDefault = 40;
+    canvasHeightDefault = 40;
+    imageSource = 'images/silver_smaller.jpg';
+  }
   canvas = Object.assign(document.createElement('canvas'), {
     className: 'canvas',
     id: `js-canvas${i}`,
-    width: '70',
-    height: '70',
+    width: canvasWidthDefault,
+    height: canvasHeightDefault,
   });
   document.getElementById(`js-container${i}`).appendChild(canvas);
   var container = document.getElementById(`js-container${i}`),
@@ -17,11 +25,9 @@ function addCanvas(i, reset) {
     ctx = canvas.getContext('2d'),
     image = new Image(),
     brush = new Image();
-
-  image.src = 'images/silver.jpg';
+  image.src = imageSource;
   image.onload = function () {
     ctx.drawImage(image, 0, 0);
-    // Show the form when Image is loaded.
   };
 
   brush.src = 'images/coin2.jpeg';
@@ -43,8 +49,6 @@ function addCanvas(i, reset) {
     return Math.atan2(point2.x - point1.x, point2.y - point1.y);
   }
 
-  // Only test every `stride` pixel. `stride`x faster,
-  // but might lead to inaccuracy
   function getFilledInPixels(stride) {
     if (!stride || stride < 1) {
       stride = 1;
@@ -87,9 +91,8 @@ function addCanvas(i, reset) {
 
   function handlePercentage(filledInPixels) {
     filledInPixels = filledInPixels || 0;
-    console.log(filledInPixels + '%');
 
-    if (filledInPixels > 10) {
+    if (filledInPixels > 50) {
       if (!reset.includes(index)) {
         reset.push(index);
       }
@@ -120,7 +123,6 @@ function addCanvas(i, reset) {
       angle = angleBetween(lastPoint, currentPoint),
       x,
       y;
-
     for (var i = 0; i < dist; i++) {
       x = lastPoint.x + Math.sin(angle) * i - 25;
       y = lastPoint.y + Math.cos(angle) * i - 25;
@@ -136,7 +138,7 @@ function addCanvas(i, reset) {
     isDrawing = false;
   }
 }
-// end of addCanvas
+// end of Canvas creation
 
 const handleFinalTry = () => {
   alertPrompt('congrats', 'Bingoo');
@@ -148,18 +150,17 @@ const handleFinalTry = () => {
         <h2>$750 + 200 FREE SPINS</h2>
     </div>
     <p id="youAre">You are winner number 1 out of 201 players today!</p>
-    <form action="https://vitamediagroup.com" method="get"> <label>Sign up to collect your
+    <form action="https://vitamediagroup.com" method="get"> <label>Signup to collect your
             winnings</label><input type="text" name="first_name" placeholder="Name" required="">
         <input type="tel" size="8" pattern="[1-9]{1}[0-9]{7}" name="phone" placeholder="Mobile" required="">
         <input type="email" name="email" placeholder="Email" required="">
-        <button type="submit">Sign up</button>
+        <button type="submit"class="last_btn">Sign up</button>
     </form>
     </div>`);
   }, 2000);
 };
 function multiCanvas() {
-  // alertPrompt('', '');
-  // remove here was just 2 test
+  alertPrompt('', '');
   let reset = [];
   for (let i = 1; i <= 9; i++) {
     addCanvas(i, reset);
@@ -167,8 +168,7 @@ function multiCanvas() {
 }
 
 function scratchHanddler(numberGenerator, winnerGenerator) {
-  //alertPrompt('', '');
-  console.log('Scratch handdler', winnerGenerator);
+  alertPrompt('', '');
   state.decrement();
   const attempts = document.getElementById('attempts_left');
   attempts.innerHTML = 'Scrach Cards Left:';
@@ -186,8 +186,6 @@ function scratchHanddler(numberGenerator, winnerGenerator) {
 const displayWinnerNumbers = () => {
   const title2 = document.getElementById('winner_title');
   const winNumbers = document.getElementById('winner_text');
-  title2.style.visibility = 'visible';
-  winNumbers.style.visibility = 'visible';
 };
 
 const numbersCreator = () => {
@@ -217,14 +215,12 @@ const winnerNumberCreator = () => {
     numbers[i].innerHTML = randomNumbers[i];
   }
   return randomNumbers;
-  // numbers.forEach(e => console.log(e.innerHTML));
 };
 
 const createWNumbers4LastTry = () => {
   const numbers = [];
   const randomRest = randomGenerator(9);
   const lastRandom = winnerNumberCreator();
-  console.log('are u here?');
   for (let i = 0; i < 5; i++) {
     numbers[i] = document.getElementById(`num_${i}`);
     numbers[i].innerHTML = lastRandom[i];
@@ -241,14 +237,13 @@ function showAttempt() {
 }
 const alertPrompt = (text, alert) => {
   const textBox = document.getElementById('text_here');
-  textBox.style.visibility = 'visible';
   const title = document.getElementById('title');
   const promptText = document.getElementById('p_text');
   title.innerHTML = text;
   promptText.innerHTML = alert;
 };
 
-//                Main popcreator
+//       Main popcreator
 const popupCreator = content => {
   state.increment();
   const overlay = document.createElement('div');
@@ -268,7 +263,6 @@ const popupCreator = content => {
     overlay.style.display = 'none';
     popBox.style.display = 'none';
   });
-  console.log(overlay);
 };
 
 (function main() {
@@ -292,10 +286,10 @@ const popupCreator = content => {
     'load',
     function () {
       popupCreator(`<div class="first_pop">
-      <img src="images/coin-animation.gif"  alt="The Coin" class="spin_coin">
-      <p>YOU HAVE 3 FREE SPINS</p>
-      <button class="close" id="closer">START NOW!</button>
-    </div>`);
+    <img src="images/coin-animation.gif"  alt="The Coin" class="spin_coin">
+    <p>YOU HAVE 3 FREE SPINS</p>
+    <button class="close" id="closer">START NOW!</button>
+  </div>`);
     },
     false
   );
@@ -322,8 +316,6 @@ const popupCreator = content => {
         scratchHanddler(numbersCreator, winnerNumberCreator);
         break;
       case 0:
-        // showAttempt(0);
-        // alertPrompt('congrats', 'Bingoo');
         break;
       default:
         break;
