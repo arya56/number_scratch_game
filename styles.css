@@ -1595,7 +1595,7 @@
     text-transform: uppercase;
     -webkit-text-stroke: 2px black;
     position: relative;
-    top: -7vmax;
+    top: -10vmax;
     text-align: center;
   }
   .to_win span {
@@ -1822,8 +1822,8 @@
     display: grid;
     -ms-grid-columns: 100vmin;
     grid-template-columns: 100vmin;
-    -ms-grid-rows: 18vmax 6vmax 16vmax 48vmax 0vmax;
-    grid-template-rows: 18vmax 6vmax 16vmax 48vmax 0vmax;
+    -ms-grid-rows: 15vmax 4vmax 16vmax 59vmax 0vmax;
+    grid-template-rows: 15vmax 4vmax 16vmax 59vmax 0vmax;
     grid-template-areas:
       'header'
       'sidebar1'
@@ -1842,7 +1842,7 @@
     width: 100vw;
   }
   .top_logo img {
-    width: 53vmin;
+    width: 35vmin;
     margin-top: -2vmin;
   }
   .text_here {
@@ -1885,7 +1885,7 @@
     height: 11vmax;
     border-radius: 2.2vmin;
     color: white;
-    padding: 1.9vmax 2vmin;
+    padding: 3.9vmax 2vmin;
     font-size: 1.3vmax;
     cursor: pointer;
     white-space: pre-wrap;
@@ -1948,12 +1948,12 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 31vmax;
+    height: 35vmax;
     gap: 1vmax;
     border-top-left-radius: 4vmin;
     border-top-right-radius: 4vmin;
     position: absolute;
-    top: 14.1vmax;
+    top: 19.1vmax;
   }
   .your_nums_gridbox {
     display: -ms-grid;
@@ -2042,7 +2042,7 @@
     text-transform: uppercase;
     -webkit-text-stroke: 2px black;
     position: relative;
-    top: -6.6vmax;
+    top: -10.6vmax;
     text-align: center;
   }
   .to_win span {
