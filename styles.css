@@ -271,7 +271,7 @@
   .canvas {
     position: relative;
     top: -0.5vmin;
-    left: -.9vmax;
+    left: -0.9vmax;
     border-radius: 50%;
   }
   .winnums_redbox,
@@ -938,7 +938,7 @@
     display: grid;
     -ms-grid-columns: 100vmin;
     grid-template-columns: 100vmin;
-    -ms-grid-rows: 23vmax 7vmax 9vmax 69vmax 6vmax;
+    -ms-grid-rows: 23vmax 7vmax 9vmax 70vmax 6vmax;
     grid-template-rows: 23vmax 7vmax 9vmax 69vmax 6vmax;
     grid-template-areas:
       'header'
@@ -958,8 +958,8 @@
     width: 100vw;
   }
   .top_logo img {
-    width: 53vmin;
-    margin-top: -2vmin;
+    width: 45vmin;
+    margin-top: 2vmax;
   }
   .text_here {
     display: -webkit-box;
@@ -1146,7 +1146,7 @@
     -webkit-text-stroke: 2px black;
     position: relative;
     text-align: center;
-    top: -3.5vmax;
+    top: -5.5vmax;
   }
   .to_win {
     color: gold;
@@ -1154,7 +1154,7 @@
     text-transform: uppercase;
     -webkit-text-stroke: 2px black;
     position: relative;
-    top: -11vmax;
+    top: -15.2vmax;
     text-align: center;
   }
   .to_win span {
@@ -1380,7 +1380,7 @@
     -ms-grid-columns: 100vmin;
     grid-template-columns: 100vmin;
     -ms-grid-rows: 18vmax 6vmax 10vmax 64vmax 7vmax;
-    grid-template-rows: 18vmax 6vmax 10vmax 64vmax 7vmax;
+    grid-template-rows: 18vmax 6vmax 10vmax 65vmax 7vmax;
     grid-template-areas:
       'header'
       'sidebar1'
@@ -1398,8 +1398,8 @@
     width: 100vw;
   }
   .top_logo img {
-    width: 53vmin;
-    margin-top: -2vmin;
+    width: 45vmin;
+    margin-top: 2vmax;
   }
   .text_here {
     display: -webkit-box;
@@ -1587,7 +1587,7 @@
     -webkit-text-stroke: 2px black;
     position: relative;
     text-align: center;
-    top: -1.7vmax;
+    top: -4.5vmax;
   }
   .to_win {
     color: gold;
@@ -1595,7 +1595,7 @@
     text-transform: uppercase;
     -webkit-text-stroke: 2px black;
     position: relative;
-    top: -10vmax;
+    top: -12vmax;
     text-align: center;
   }
   .to_win span {
@@ -1779,7 +1779,7 @@
     margin: 2vmin auto 0vmax;
   }
 }
-@media screen and (max-width: 369px) {
+@media screen and (max-width: 340px) {
   * {
     box-sizing: border-box;
   }
@@ -1842,8 +1842,8 @@
     width: 100vw;
   }
   .top_logo img {
-    width: 35vmin;
-    margin-top: -2vmin;
+    width: 44vmin;
+    margin-top: 2vmax;
   }
   .text_here {
     display: -webkit-box;
