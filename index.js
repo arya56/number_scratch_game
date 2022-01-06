@@ -6,7 +6,7 @@ function addCanvas(i, reset) {
   let canvasWidthDefault = '70';
   let canvasHeightDefault = '70';
   let imageSource = 'images/silver.jpg';
-  if (screen.width < 471) {
+  if (screen.width < 471 || (screen.width > 845 && screen.height < 789)) {
     canvasWidthDefault = 40;
     canvasHeightDefault = 40;
     imageSource = 'images/silver_smaller.jpg';

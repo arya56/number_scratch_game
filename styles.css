@@ -226,7 +226,7 @@
     background-color: orangered;
     border: 1.4vmin solid gold;
     padding: 1.4vmin;
-    width: 44vmax;
+    width: 41vmax;
     height: 76vmin;
   }
 
@@ -270,8 +270,8 @@
   }
   .canvas {
     position: relative;
-    top: 0.5vmin;
-    right: 2vmin;
+    top: -0.5vmin;
+    left: -.9vmax;
     border-radius: 50%;
   }
   .winnums_redbox,
