@@ -75,7 +75,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 34vmin;
+    width: 35vmax;
   }
   .text_here h1 {
     color: white;
@@ -92,7 +92,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 4vmin;
+    gap: 2vmax;
     height: 15vmin;
   }
   .scr_button {
@@ -125,7 +125,7 @@
     align-items: center;
     border-radius: 2.2vmin;
     background-color: gold;
-    width: 29vmin;
+    width: 29vmax;
     border: 0.4vmin solid lightseagreen;
   }
   .attempts h2 {
@@ -486,7 +486,7 @@
   }
   .top_logo img {
     width: 28vmin;
-    margin-top: 24vmin;
+    margin-top: 32vmax;
   }
   .text_here {
     display: -webkit-box;
