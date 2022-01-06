@@ -173,6 +173,12 @@ function scratchHanddler(numberGenerator, winnerGenerator) {
   const attempts = document.getElementById('attempts_left');
   attempts.innerHTML = 'Scrach Cards Left:';
   scratch.innerHTML = 'Try Again';
+  if (screen.width > 340 && screen.width <= 470) {
+    scratch.style.padding = '1.2vmax 1vmin';
+  }
+  if (screen.width > 470 && screen.width <= 600) {
+    scratch.style.padding = '1.9vmax 1vmin';
+  }
   if (numberGenerator && winnerGenerator) {
     winnerGenerator();
     numberGenerator();
